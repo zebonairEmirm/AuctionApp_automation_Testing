@@ -13,7 +13,7 @@ RSpec.describe 'Auction Smoke', type: :feature do
   before(:each) do
 
     page.driver.browser.manage.window.maximize #fullscreen mode
-    visit 'http://auction-app-rf.herokuapp.com/'
+    visit 'https://auction-app-rf.herokuapp.com/'
     #Essential to login on every case 
     #Loging in with premade account
 
@@ -40,7 +40,7 @@ RSpec.describe 'Auction Smoke', type: :feature do
     #Since the highest bid will change after each test run, it is important to increment the bid value on each new test
     #The following block of code increments the value of a bid input until its the highest bid 
     #I've used exception handling to make the case pass 
-    bid = 410 #setting price as a variable
+    bid = 413 #setting price as a variable
     within '.ProductDetails_productDetails__WoTbJ' do  #within the div where the bidding form is
       begin #Try-catch method basically
         find(:xpath, '//*[@id="root"]/div/div[3]/div[2]/input').set bid #setting the bid
