@@ -54,9 +54,9 @@ RSpec.describe 'Auction Smoke', type: :feature do
           find_button('Place Bid').click
           sleep(3)
         end
-        rescue Selenium::WebDriver::Error::NoSuchAlertError #this error is expected, hence the exception on it 
-        end
+      rescue Selenium::WebDriver::Error::NoSuchAlertError #this error is expected, hence the exception on it 
       end
+    end
   end
 
 
