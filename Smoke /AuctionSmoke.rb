@@ -27,6 +27,13 @@ RSpec.describe 'Auction Smoke', type: :feature do
       expect(page).to have_text('Logout')
   end
   
+ 
+  it 'Search for a product' do
+    productSearch = find(:xpath, '//*[@id="root"]/div/nav/div/div/input').set 'Lenovo A7000'
+    productSearch.native.send_keys(:return)
+    expect(page).to have_text('Lenovo A7000')
+    expect(page).to have_text('Starts from $400.00')
+  end
 
   it 'Bid on an item' do 
     #navigating to featured sections and hovering one of the items
