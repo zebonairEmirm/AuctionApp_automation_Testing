@@ -1,9 +1,9 @@
 pipeline {
-    agent any 
+    agent { docker { image 'ruby' } }
     stages {
-        stage('Stage 1') {
+        stage('build') {
             steps {
-                sh 'AuctionSmoke.rb'
+                sh 'ruby --version'
             }
         }
     }
