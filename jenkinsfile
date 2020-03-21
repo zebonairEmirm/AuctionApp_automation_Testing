@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-                sh 'rspec AuctionSmoke.rb'
+                sh 'AuctionSmoke.rb'
             }
         }
     }
