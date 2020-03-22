@@ -33,6 +33,7 @@ RSpec.describe 'Auction Smoke', type: :feature do
     productSearch.native.send_keys(:return)
     expect(page).to have_text('Lenovo A7000')
     expect(page).to have_text('Starts from $400.00')
+    sleep(3)
   end
 
   it 'Bid on an item' do 
@@ -47,7 +48,7 @@ RSpec.describe 'Auction Smoke', type: :feature do
     #Since the highest bid will change after each test run, it is important to increment the bid value on each new test
     #The following block of code increments the value of a bid input until its the highest bid 
     #I've used exception handling to make the case pass 
-    bid = 413 #setting price as a variable
+    bid = 609 #setting price as a variable
     within '.ProductDetails_productDetails__WoTbJ' do  #within the div where the bidding form is
       begin #Try-catch method basically
         find(:xpath, '//*[@id="root"]/div/div[3]/div[2]/input').set bid #setting the bid
