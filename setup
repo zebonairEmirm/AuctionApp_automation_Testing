@@ -1,0 +1,12 @@
+Installing ruby: 
+
+Download ruby from https://www.ruby-lang.org/en/documentation/installation/
+
+Version which should be installed is 2.6 or 2.7 (ruby -v)
+
+After successfully setting up ruby, install following ruby gems (most of them are installed by default/ check "gem list"): 
+
+gem install rspec
+gem install selenium
+gem install selenium-webdriver
+gem install capybara
