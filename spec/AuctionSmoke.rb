@@ -4,6 +4,7 @@ require 'selenium-webdriver'
 require 'rspec'
 require 'faker'
 
+
 Capybara.default_driver = :selenium_chrome
 Capybara.ignore_hidden_elements = false
 
@@ -85,6 +86,7 @@ RSpec.describe 'Auction Smoke', type: :feature do
     find_field('lastName').set Faker::Name.last_name
     find_field('email').set Faker::Internet.email
     find_field('password').set '12345' #Same password for all these generated user 
+    sleep(2)
     find_button('Register').click  
     sleep(3)
     expect(page).to have_text('Logout')
